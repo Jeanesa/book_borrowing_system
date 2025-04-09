@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root, body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  color: black;
+  background-color: rgb(255, 248, 240);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.header-container {
+  flex-shrink: 0; /* Prevents the header from shrinking */
+}
+
+.main-content {
+  flex-grow: 1; /* Allows it to expand dynamically */
+  padding: 20px;
+  min-height: 0; /* Prevents flex-related height issues */
+  overflow-y: hidden; /* Prevents scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container {
+  flex-shrink: 0; /* Keeps footer at the bottom */
+}
+
+.role-selection {
+  width: 100%;
+  display: flex;
+}
+
+.roles {
+  width: 75%;
+}
+
+header {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  line-height: 0.5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: smaller;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; /* Full width of screen */
+  height: 50vh; /* Full height of the screen */
+}
+
+.button-container p {
+  font-size: 25px;
+}
+
+.student-box, .faculty-box, .librarian-box {
+  flex: 1; /* Makes all boxes take equal width */
+  height: 350px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(87, 87, 87, 0.3);
+  transition: transform 0.2s ease-in-out;
+  margin: 0 10px; /* Ensures spacing between boxes */
+}
+
+.student-box {
+  color: navy;
+  background-color: rgb(96, 188, 219);
+}
+
+.faculty-box {
+  color: rgb(8, 68, 8);
+  background-color: rgb(51, 190, 51);
+}
+
+.librarian-box {
+  color: rgb(78, 0, 0);
+  background-color: rgb(216, 26, 26);
+}
+
+.icon {
+  font-size: 90px;
+}
+
+.announcement-board {
+  width: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background-color: white;
+  border: black solid 2px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgb(68, 68, 68);
+}
+
+.board-title p {
+  background-color: black;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0;
+  padding: 15px;
+  font-size: large;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgb(68, 68, 68);
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  overflow: hidden;
+}
+
+.notice-table th, .notice-table td{
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.notice-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* Librarian Page */
+.librarian-page {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+}
+
+.all-books-table, .all-borrowed-books-table {
+  background-color: white;
+  width: 70vw;
+  max-width: 100%;
+  border: 2px solid black;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.all-books-table th, .all-borrowed-books-table th {
+  padding: 10px;
+  border-bottom: 2px solid grey;
+}
+
+.all-books-table td, .all-borrowed-books-table td {
+  padding: 10px;
+}
+
+.books-info {
+  margin-right: 50px;
+}
+
+.books-info input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-family: 'Inter', sans-serif;
+  width: 44%;
+}
+
+.add-button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: small;
+}
+
+.delete-btn, .notice-remove-button {
+  padding: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: small;
+}
+
+.notice-container {
+  padding: 10px;
+  width: 100%; /* Ensures it stays within its designated area */
+  max-width: 400px; /* Adjust this to fit your design */
+  overflow: hidden; /* Prevents content from overflowing */
+  border-radius: 10px;
+}
+
+.notice-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures the table doesn't exceed container width */
+}
+
+.notice-table th {
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word; /* Ensures text wraps inside the cell */
+  white-space: normal; /* Allows text to wrap onto the next line */
+  overflow: hidden;
+}
+
+.notice-table td {
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word; /* Ensures text wraps inside the cell */
+  white-space: normal; /* Allows text to wrap onto the next line */
+  overflow: hidden;
+}
+
+.notice-action {
+  text-align: right;
+}
+
+.notice-add-button {
+  padding: 13px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: small;
+}
+
+.notice-container input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  font-family: 'Inter', sans-serif;
+  width: 78%;
+}
+
+/* Student Page */
+.student-page, .faculty-page {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+}
+
+.back-container {
+  padding-top: 20px;
+  display: flex;
+  width: 2%;
+}
+
+.back-icon {
+  font-size: 20px;
+}
+
+.available-books-table, .borrowed-books-table,
+.faculty-available-books, .faculty-borrowed-books {
+  background-color: white;
+  width: 90vw;
+  max-width: 100%;
+  border: 2px solid black;
+  text-align: left;
+  border-radius: 15px;
+}
+
+.available-books-table th, .borrowed-books-table th,
+.faculty-available-books th, .faculty-borrowed-books th {
+  padding: 10px;
+  border-bottom: 2px solid grey;
+}
+
+.available-books-table td, .borrowed-books-table td,
+.faculty-available-books td, .faculty-borrowed-books td {
+  padding: 10px;
+}
+
+.borrow-button, .return-button{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.borrow-button {
+  background-color: black;
+  color: white;
+}
+
+.borrow-button:disabled {
+  border: none;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.return-button {
+  background-color: navy;
+  color: white;
+}
